@@ -1,6 +1,12 @@
 :root {
-    --black: #0D0D0F;
+    --black: #010100;
     --white: #FFFFFF;
+    --highlight-color: #f7931a; /* Màu vàng cho phần highlight */
+  --button-bg: #f7931a;
+  --button-hover-bg: #e68216;
+  --text-color: #ffffff;
+  --background-color: #000000; /* Nền đen */
+  --gradient-colors: linear-gradient(89.88deg, #F1A14A 3.89%, #E66216 32.26%, #5E5D68 46.45%, #2C527E 60.63%);
 }
 
 .logo1 {
@@ -20,138 +26,120 @@
     margin-left: 20px;
 }
 
-.full-width-section {
-    background-color: #0D0D0F; /* Màu nền đen */
-    padding: 20px 0; 
-    height: calc(100vh - var(--navbar-height));
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin-top: 0; /* Đảm bảo không có khoảng cách trên */
-}
-.container {
-    max-width: 100%; 
-    width: 100%; 
-    padding: 0 15px;
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start; 
-    justify-content: center; 
-}
-
-.row {
-    
-    width: 100%; 
-}
-.spaced-row {
-    margin-top: 20px; /* Khoảng cách 20px từ phần tử phía trên */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
-
-.col-lg-8 {
-    flex: 1; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: flex-start; 
+  
+  .hero-section {
+    background-color: var(--black);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 20px;
+    min-height: 100vh;
 }
-
-.col-lg-4 {
-    flex: 1; 
-    display: flex; 
-    justify-content: flex-end; 
-    align-items: center; 
-    padding: 0 15px;
-}
-
-.gradient-text {
-    background: linear-gradient(89.88deg, #F1A14A 3.89%, #E66216 32.26%, #5E5D68 46.45%, #2C527E 60.63%);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    display: inline; 
-}
-/* Cài đặt kiểu cho nút với border chỉ ở góc trên bên trái và dưới bên phải */
-.custom-button {
-    background: linear-gradient(180deg, #FE9A4C -40.83%, #10283C 100%);
-    color: var(--white); /* Màu chữ */
-    border: 2px solid transparent; /* Border 2px nhưng không hiển thị */
-    padding: 10px 20px; /* Khoảng cách bên trong nút */
-    border-radius: 10px; /* Nếu bạn muốn tất cả các góc tròn giống nhau */
-    font-size: 16px; /* Kích thước chữ */
-    font-weight: bold; /* Đậm chữ */
-    cursor: pointer; /* Con trỏ chuột khi di chuột lên nút */
-    position: relative; /* Đặt vị trí tương đối cho việc sử dụng pseudo-elements */
-    overflow: hidden; /* Ẩn phần dư thừa của border */
-    outline: none; /* Loại bỏ outline khi nhấn nút */
-    transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp khi thay đổi border-color */
-    border-bottom: 2px solid transparent; /* Không có border dưới */
-    border-right: 2px solid transparent; /* Không có border bên phải */
-}
-
-/* Nếu bạn muốn thiết lập các góc cụ thể */
-.custom-button {
-    border-top-left-radius: 12px; /* Radius cho góc trên bên trái */
-    border-top-right-radius: 0; /* Radius cho góc trên bên phải */
-    border-bottom-left-radius: 0; /* Radius cho góc dưới bên trái */
-    border-bottom-right-radius: 12px; /* Radius cho góc dưới bên phải */
-}
-.custom-button i {
-    color: #F29358; 
-    font-size: 20px; 
-    margin-right: 8px; 
-    padding: 5px; 
-    border-radius: 50%; 
-    text-align: center;
-    align-items: center;
-}
-
 
   
-h1 {
-    font-size: 2rem; 
-    margin-bottom: 0; 
+  .hero-content {
+    max-width: 45%; 
+    margin-top: 0;
+  }
+  
+  .hero-content h1 {
+    color: var(--white);
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content .highlight {
+    color: var(--highlight-color); 
+  }
+  
+  .hero-content p {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .highlight {
+    background: var(--gradient-colors);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    display: inline;  
+}
+  .powered-by {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .powered-text {
+    background: var(--gradient-colors);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; /* Làm cho phần màu bên ngoài chữ trong suốt */
+    padding: 5px 10px; /* Khoảng cách giữa chữ và nền */
 }
 
-h4 {
-    font-size: 1.25rem; 
-    margin-top: 10px; 
+  .powered-by img {
+    margin-left: 10px;
+    height: 30px;
+  }
+  
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #FE9A4C -40.83%, #10283C 100%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+  }
+  .cta-button {
+    border-top-left-radius: 12px; 
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 12px;
+}
+  .cta-button:hover {
+    background: linear-gradient(90deg, #FE9A4C -40.83%, #10283C 100%);
+  }
+  
+  .cta-button i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+  
+  
+  .hero-image {
+    width: 480px;
+    height: 480px;
+    top: 147px;
+    left: 900px;
+    gap: 0px;
+    opacity: 1; 
 }
 
-.logo3 {
-    max-width: 100%; 
-    height: auto; 
-    max-height: 300px; 
-    margin: 0 auto;
-}
-
-@media (max-width: 767px) {
-    h1 {
-        font-family: Readex Pro;
-        font-size: 70px;
-        font-weight: 588;
-        line-height: 87.5px;
-        text-align: left;
-        font-variation-settings: 'HEXP' 11;
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    .hero-content {
+      max-width: 100%;
     }
-
-    p {
-        font-family: Readex Pro;
-        font-size: 25px;
-        font-weight: 300;
-        line-height: 31.25px;
-        text-align: left;
+    .hero-section {
+      flex-direction: column;
     }
-    h4 {
-        font-family: Readex Pro;
-        font-size: 30px;
-        font-weight: 300;
-        line-height: 37.5px;
-        text-align: left;
+    .hero-image {
+      width: 100%;
+      height: auto;
     }
-    .logo4 {
-        width: 156px;
-        height: 49.24px;
-    }
-    .logo3 {
-        max-height: 100px; 
-    }
-}
+  }
+ 
