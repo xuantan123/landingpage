@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -81,9 +83,72 @@
 <div class="section-header">
     <h1><span class="highlight-text">SonicEX</span> Use Cases</h1>
 </div>
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="scroll-box">
+          <img src="image/logo-swap.png" class="scroll-image" />
+          <h1 class="scroll-title">Swap</h1>
+          <p class="scroll-content-text">Execute trades with lightning speed and precision.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="scroll-box">
+          <img src="image/logo-liquidity.png" class="scroll-image" />
+          <h1 class="scroll-title">Liquidity</h1>
+          <p class="scroll-content-text">Adding liquidity to various pools, Contribute and Earn Trading fees.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="scroll-box">
+          <img src="image/logo-farms.png" class="scroll-image" />
+          <h1 class="scroll-title">Farms</h1>
+          <p class="scroll-content-text">Offering a variety of farming pools tailored with high return - low risk - healthy investment.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="scroll-box">
+          <img src="image/logo-stake.png" class="scroll-image" />
+          <h1 class="scroll-title">Stake</h1>
+          <p class="scroll-content-text">Secure your assets while earning passive income through staking with competitive rewards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-header">
+    <h1>Why Choose <span class="highlight-text">SonicEX</span></h1>
+  </div>
+  
+  
+
+
 </div>
 
   
-
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3, // Hiển thị 3 box mỗi lần
+        spaceBetween: 30, // Khoảng cách giữa các box
+        autoplay: {
+          delay: 3000, // Thay đổi tốc độ tự động chạy (3000ms = 3 giây)
+          disableOnInteraction: false, // Để autoplay không bị dừng khi người dùng tương tác
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+  </script>
+  
 </body>
 </html>
