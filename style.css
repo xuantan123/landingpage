@@ -30,116 +30,133 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-  }
-  
-  .hero-section {
-    background-color: var(--black);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 50px 20px;
-    min-height: 100vh;
 }
 
-  
-  .hero-content {
-    max-width: 45%; 
-    margin-top: 0;
-  }
-  
-  .hero-content h1 {
+.hero-section {
+    width: 100%;
+    aspect-ratio: 16/9; /* Tỷ lệ 16:9 cho toàn bộ hero section */
+    position: relative;
+    background-color: var(--black);
+    display: flex;
+    align-items: flex-start; /* Căn lề trên của hero-content */
+    justify-content: center; /* Căn giữa theo phương ngang */
+    padding: 0;
+}
+
+.hero-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 40px; /* Khoảng cách từ lề trên */
+    align-items: flex-start; /* Đảm bảo các phần tử con căn theo lề trên */
+}
+
+.hero-content {
+    padding-left: 0px;
+    flex: 3; /* 18 phần trên tổng 24 */
     color: var(--white);
-    font-size: 3rem;
-    line-height: 1.2;
+    text-align: left;
+    padding-right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    box-sizing: border-box;
+}
+
+.hero-content .highlight {
+    color: var(--highlight-color);
+}
+
+.hero-content h1 {
+    font-size: 70px; /* Kích thước chữ cho tiêu đề */
+}
+
+.hero-content p {
+    font-size: 25px; 
     margin-bottom: 20px;
-  }
-  
-  .hero-content .highlight {
-    color: var(--highlight-color); 
-  }
-  
-  .hero-content p {
-    color: var(--white);
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  .highlight {
+}
+
+.highlight {
     background: var(--gradient-colors);
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
     display: inline;  
 }
-  .powered-by {
+
+.powered-by {
     display: flex;
+    align-items: center;
     margin-bottom: 20px;
-  }
-  .powered-text {
-    background: var(--gradient-colors);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; /* Làm cho phần màu bên ngoài chữ trong suốt */
-    padding: 5px 10px; /* Khoảng cách giữa chữ và nền */
 }
 
-  .powered-by img {
+.powered-by .powered-text {
+    background: var(--gradient-colors);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    padding: 5px 10px; 
+}
+
+.powered-by img {
     margin-left: 10px;
     height: 30px;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, #FE9A4C -40.83%, #10283C 100%);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px; 
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
-  }
-  .cta-button {
+    width: 170px; 
+    min-width: 120px;
+}
+
+.cta-button {
     border-top-left-radius: 12px; 
     border-top-right-radius: 0;
     border-bottom-left-radius: 0; 
     border-bottom-right-radius: 12px;
 }
-  .cta-button:hover {
+
+.cta-button:hover {
     background: linear-gradient(90deg, #FE9A4C -40.83%, #10283C 100%);
-  }
-  
-  .cta-button i {
-    margin-left: 10px;
-    font-size: 1.2rem;
-  }
-  
-  
-  .hero-image {
-    width: 480px;
-    height: 480px;
-    top: 147px;
-    left: 900px;
-    gap: 0px;
-    opacity: 1; 
 }
 
-  
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-  }
-  @media (max-width: 768px) {
-    .hero-content {
-      max-width: 100%;
+.cta-button i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.hero-image {
+    flex: 1; /* 6 phần trên tổng 24 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: auto;
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của container */
+    height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-row {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px; /* Giảm khoảng cách từ lề trên trên màn hình nhỏ */
     }
-    .hero-section {
-      flex-direction: column;
+    .hero-content, .hero-image {
+        flex: 1; /* Cả hai sẽ chiếm cùng diện tích */
     }
-    .hero-image {
-      width: 100%;
-      height: auto;
-    }
-  }
- 
+}
