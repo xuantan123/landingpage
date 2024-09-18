@@ -2,11 +2,11 @@
     --black: #010100;
     --white: #FFFFFF;
     --highlight-color: #f7931a; 
-  --button-bg: #f7931a;
-  --button-hover-bg: #e68216;
-  --text-color: #ffffff;
-  --background-color: #000000;
-  --gradient-colors: linear-gradient(89.88deg, #F1A14A 3.88%, #E66216 48.74%, #5E5D68 71.17%, #2C527E 93.6%);
+    --button-bg: #f7931a;
+    --button-hover-bg: #e68216;
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --gradient-colors: linear-gradient(89.88deg, #F1A14A 3.88%, #E66216 48.74%, #5E5D68 71.17%, #2C527E 93.6%);
 }
 * {
     box-sizing: border-box;
@@ -97,14 +97,16 @@ body {
 .powered-by {
     display: flex;
     align-items: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.powered-by .powered-text {
+.powered-text {
     background: var(--gradient-colors);
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
     padding: 5px 10px; 
+    text-align: center;
 }
 
 .powered-by img {
@@ -243,14 +245,23 @@ body {
     
 }
 /* ---------------------------------------- */
+.swiper-container-big{
+    width: 100%;
+    background-color: var(--background-color);
+}
+.swiper{
+    position: relative;
+    width: 1421px;
+    background-color: var(--background-color);
+}
 .swiper-container {
     width: 100%;
-    height: 40%;
     background-color: var(--background-color);
   }
   
 .swiper-wrapper {
     display: flex;
+    padding-left: 10px;
     gap: 3px; 
 }
   .swiper-slide {
@@ -263,19 +274,17 @@ body {
   
   .scroll-box {
     max-width: 477px;
-    max-height: 328px;
-    width: 80%;
     aspect-ratio: calc(477 / 328);
-    height: auto;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     position: relative;
     color: white;
-    margin: 0 100px; 
-    display: flex;
+    display: flex ;
+    justify-content: space-between;
     flex-direction: column;
     background: url('./image/use-case-bg.svg') no-repeat;
     background-size: contain;
+    background-position: center;
   }
 
   
@@ -448,58 +457,60 @@ body {
     margin-bottom: 5px; 
 }
 .rectangle{
-    width: 100%;
+    width: 100vw;
     display: block;
+    position: relative;
+    left: calc(-50vw + 50%);
     margin-top: 90px;
 }
 /* ------------------------- */
-    .container-footer {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #000; 
-        height: 40vh; 
-        padding: 0;
-        margin: 0;
+.container-footer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; 
+    height: 40vh; 
+    padding: 0;
+    margin: 0;
     }
     
-    .title {
-        background: var(--gradient-colors);
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent; 
-        font-size: 68px;
+.title {
+    background: var(--gradient-colors);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-size: 68px;
         
     }
     
-    .tagline {
-        color: white;
-        font-size: 20px;
-        margin: 0;
-        display: flex;
-        align-items: center;
+.tagline {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
     }
     
-    .logo-sonic {
-        width: 90px;
-        height: 30px;
-        margin-left: 10px; 
+.logo-sonic {
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; 
     }
     
-    .lines {
-        width: 60%;
-        max-width: 500px;
-        margin: 20px 0 0 0; 
+.lines {
+    width: 60%;
+    max-width: 500px;
+    margin: 20px 0 0 0; 
     }
     
-    .social-icons {
-        margin-top: 20px; 
+.social-icons {
+    margin-top: 20px; 
     }
     
-    .social-icons img {
-        width: 30px; 
-        margin: 0 10px; 
+.social-icons img {
+    width: 30px; 
+    margin: 0 10px; 
     }
     
 
