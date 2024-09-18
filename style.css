@@ -70,6 +70,7 @@ body {
 }
 
 .hero-content h1 {
+    color: var(--white);
     font-size: 70px;
 }
 
@@ -165,51 +166,27 @@ body {
 /* -------- */
 .box-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background-color: #000000;
-    padding-top: 10px;
-    padding-bottom: 200px;
-    gap: 0px; 
+    padding-top: 30px;
+    padding-bottom: 80px;
+    gap: 20px; 
 }
 
 .box {
-    background-color: #1c1c1c;
-    border: 1px solid #ff6600;
-    border-radius: 10px;
-    width: 300px;
+    max-width: 390px;
+    width: 18%;
+    aspect-ratio: calc(390 / 150);
     height: auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     position: relative;
     color: white;
-    margin: 0 0px;
-}
-
-.box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #1c1c1c;
-    border-left: 1px solid var(--gradient-colors);
-    border-top: 1px solid var(--gradient-colors);
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.box::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #1c1c1c;
-    border-right: 1px solid var(--gradient-colors);
-    border-bottom: 1px solid var(--gradient-colors);
-    transform: translate(50%, 50%) rotate(45deg);
-}
+    display: flex;
+    flex-direction: column;
+    background: url('./image/use-case-vecto.png') no-repeat;
+    background-size: contain;
+  }
 
 .box-title {
     font-size: 18px;
@@ -258,65 +235,45 @@ body {
 
 .highlight-text {
     background: var(--gradient-colors); 
-    -webkit-background-clip: text; /* Cắt nền chỉ ở chữ */
+    -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
     
 }
 /* ---------------------------------------- */
 .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 40%;
     background-color: var(--background-color);
   }
   
+.swiper-wrapper {
+    display: flex;
+    gap: 3px; 
+}
   .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 30px;
+    padding: 0px;
+    margin: 0px;
   }
   
   .scroll-box {
-    background-color: #1c1c1c;
-    border: 1px solid #ff6600;
-    border-radius: 10px;
-    width: 400px; 
-    height: 250px;
+    max-width: 477px;
+    width: 70%;
+    aspect-ratio: calc(477 / 328);
+    height: 100%;
     padding: 20px;
     text-align: center;
     position: relative;
     color: white;
-    margin: 0 10px; 
+    margin: 0 100px; 
     display: flex;
     flex-direction: column;
+    background: url('./image/use-case-bg.svg') no-repeat;
+    background-size: contain;
+  }
 
-  }
-  
-  .scroll-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #1c1c1c;
-    border-left: 1px solid #ff6600;
-    border-top: 1px solid #ff6600;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  
-  .scroll-box::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #1c1c1c;
-    border-right: 1px solid #ff6600;
-    border-bottom: 1px solid #ff6600;
-    transform: translate(50%, 50%) rotate(45deg);
-  }
   
   .scroll-image {
     max-width: 80%;
@@ -330,10 +287,185 @@ body {
     margin-bottom: 10px;
     text-align: left;
   }
-  
+  .scroll-box h1 {
+    color: var(--white);
+  }
   .scroll-content-text {
     font-size: 20px;
     color: #ccc; 
     text-align: left;
   }
+  /* ---------- */
+  .stake-container{
+    background-color: var(--background-color);
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column; 
+    gap: 40px; 
+    padding: 20px;
+  }
+  .stake-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    max-width: 1183.82;
+    width: 60%;
+    aspect-ratio: calc(1183.82 / 328);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: url('image/use-case-stake.png') no-repeat;
+    background-size: contain;
+    margin: 0 200px;
+  }
+  .stake-box-2 {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    max-width: 1183.82;
+    width: 60%;
+    aspect-ratio: calc(1183.82 / 328);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: url('image/use-case-stake.png') no-repeat;
+    background-size: contain;
+    margin: 0 400px;
+  }
   
+  .stake-image {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    object-fit: contain;
+  }
+  
+  .stake-text {
+    color: white;
+  }
+  
+  .stake-text h1 {
+    color: var(--white);
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .stake-text p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  /* ------------------ */
+  .roadmap-header{
+    text-align: center; 
+    background-color: var(--background-color); 
+    padding: 20px 0; 
+    
+  }
+  .roadmap-header h1 {
+    font-size: 50px;
+    color: var(--white);
+  }
+  .roadmap-header p {
+    color: var(--white);
+    font-size: 25px;
+  }
+/* ------------------- */
+
+.stage-box {
+    background: var(--background-color); /* Màu nền của .stage-box */
+    width: 100%;
+    display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    padding: 20px; 
+    flex-wrap: wrap;
+}
+
+.stage-content {
+    display: flex;
+    flex-direction: column; 
+    background-color: var(--background-color);
+    padding: 20px;
+    max-width: 1194px; 
+    width: 70%;
+    aspect-ratio: calc(1194 / 210.33); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    background: url('image/stage-box.png') no-repeat; 
+    background-size: contain; 
+    margin: 0;
+    color: white; 
+    padding-left: 270px;
+    margin-bottom: 10px;
+}
+
+.stage-content h1 {
+    color: var(--white);
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.stage-content ul {
+    list-style-type: disc; 
+    font-size: 25px; 
+    padding-left: 40px; 
+    margin: 0; 
+}
+
+.stage-content li {
+    font-size: 16px; 
+    margin-bottom: 5px; 
+}
+.rectangle{
+    display: block;
+    margin-top: 90px;
+}
+/* ------------------------- */
+.container-footer {
+    background-color: var(--background-color); /* Màu nền đen */
+    color: #fff; /* Màu chữ trắng */
+    display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa nội dung theo chiều ngang */
+    height: 100vh; /* Chiếm toàn bộ chiều cao của viewport */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 20px; /* Padding xung quanh */
+}
+.title {
+    background: var(--gradient-colors);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-size: 68px;
+}
+.tagline {
+    font-size: 1.5rem;
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+    line-height: 1.5; /* Tăng khoảng cách giữa các dòng văn bản */
+}
+
+.logo {
+    width: 40px; /* Kích thước hình ảnh logo */
+    vertical-align: middle;
+    margin-left: 5px; /* Khoảng cách giữa logo và văn bản */
+}
+
+.lines {
+    width: 60%; /* Chiếm 60% chiều rộng của container */
+    max-width: 500px; /* Kích thước tối đa */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+    opacity: 0.7; /* Thay đổi độ mờ của hình ảnh */
+}
+
+.social-icons {
+    display: flex; /* Sử dụng Flexbox để căn giữa các biểu tượng xã hội */
+    justify-content: center; /* Căn giữa các biểu tượng xã hội */
+    gap: 15px; /* Khoảng cách giữa các biểu tượng xã hội */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+.social-icons img {
+    width: 35px; /* Kích thước hình ảnh các biểu tượng xã hội */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động khi hover */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Phóng to biểu tượng khi hover */
+}
