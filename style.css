@@ -109,6 +109,7 @@ body {
 
 .powered-by img {
     margin-left: 10px;
+    margin-bottom: 10px;
     height: 30px;
 }
 
@@ -173,16 +174,16 @@ body {
     display: flex;
     justify-content: center;
     background-color: #000000;
-    padding: 2% 8%; /* Sử dụng phần trăm cho padding theo chiều dọc */
-    gap: 5%; /* Sử dụng phần trăm cho khoảng cách giữa các hộp */
-    flex-wrap: wrap; /* Cho phép các hộp xuống dòng để điều chỉnh trên màn hình nhỏ hơn */
+    padding: 2% 8%; 
+    gap: 5%;
+    flex-wrap: wrap; 
 }
 
 .box {
-    flex: 1 1 calc(33% - 5%); /* Định nghĩa chiều rộng dựa trên tỉ lệ phần trăm trừ đi khoảng cách */
+    flex: 1 1 calc(33% - 5%); 
     max-width: 390px;
     aspect-ratio: 390 / 150;
-    padding: 1%; /* Sử dụng phần trăm cho padding */
+    padding: 1%; 
     text-align: center;
     position: relative;
     color: white;
@@ -338,8 +339,8 @@ body {
     display: flex;
     flex-direction: column; 
     gap: 40px; 
-    
-    padding-left: 120px;
+    padding-left: 200px;
+    padding-right: 100px;
   }
   .stake-box {
     background-color: var(--background-color);
@@ -524,5 +525,5 @@ body {
     width: 30px; 
     margin: 0 10px; 
     }
-    
+
 
